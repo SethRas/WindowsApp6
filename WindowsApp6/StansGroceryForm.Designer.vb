@@ -25,9 +25,11 @@ Partial Class StansGroceryForm
         Me.DisplayListBox = New System.Windows.Forms.ListBox()
         Me.SearchButton = New System.Windows.Forms.Button()
         Me.CategoryRadioButton = New System.Windows.Forms.RadioButton()
-        Me.IsleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AisleRadioButton = New System.Windows.Forms.RadioButton()
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.DisplaySeachTextBox = New System.Windows.Forms.TextBox()
+        Me.FilterComboBox = New System.Windows.Forms.ComboBox()
+        Me.DisplayLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'DisplayListBox
@@ -41,7 +43,7 @@ Partial Class StansGroceryForm
         '
         'SearchButton
         '
-        Me.SearchButton.Location = New System.Drawing.Point(393, 290)
+        Me.SearchButton.Location = New System.Drawing.Point(713, 261)
         Me.SearchButton.Name = "SearchButton"
         Me.SearchButton.Size = New System.Drawing.Size(75, 23)
         Me.SearchButton.TabIndex = 1
@@ -51,7 +53,7 @@ Partial Class StansGroceryForm
         'CategoryRadioButton
         '
         Me.CategoryRadioButton.AutoSize = True
-        Me.CategoryRadioButton.Location = New System.Drawing.Point(703, 265)
+        Me.CategoryRadioButton.Location = New System.Drawing.Point(297, 76)
         Me.CategoryRadioButton.Name = "CategoryRadioButton"
         Me.CategoryRadioButton.Size = New System.Drawing.Size(86, 21)
         Me.CategoryRadioButton.TabIndex = 2
@@ -59,16 +61,16 @@ Partial Class StansGroceryForm
         Me.CategoryRadioButton.Text = "Category"
         Me.CategoryRadioButton.UseVisualStyleBackColor = True
         '
-        'IsleRadioButton
+        'AisleRadioButton
         '
-        Me.IsleRadioButton.AutoSize = True
-        Me.IsleRadioButton.Location = New System.Drawing.Point(703, 292)
-        Me.IsleRadioButton.Name = "IsleRadioButton"
-        Me.IsleRadioButton.Size = New System.Drawing.Size(50, 21)
-        Me.IsleRadioButton.TabIndex = 3
-        Me.IsleRadioButton.TabStop = True
-        Me.IsleRadioButton.Text = "Isle"
-        Me.IsleRadioButton.UseVisualStyleBackColor = True
+        Me.AisleRadioButton.AutoSize = True
+        Me.AisleRadioButton.Location = New System.Drawing.Point(297, 103)
+        Me.AisleRadioButton.Name = "AisleRadioButton"
+        Me.AisleRadioButton.Size = New System.Drawing.Size(50, 21)
+        Me.AisleRadioButton.TabIndex = 3
+        Me.AisleRadioButton.TabStop = True
+        Me.AisleRadioButton.Text = "Isle"
+        Me.AisleRadioButton.UseVisualStyleBackColor = True
         '
         'SearchTextBox
         '
@@ -79,19 +81,38 @@ Partial Class StansGroceryForm
         '
         'DisplaySeachTextBox
         '
-        Me.DisplaySeachTextBox.Location = New System.Drawing.Point(393, 320)
+        Me.DisplaySeachTextBox.Location = New System.Drawing.Point(393, 290)
         Me.DisplaySeachTextBox.Name = "DisplaySeachTextBox"
         Me.DisplaySeachTextBox.Size = New System.Drawing.Size(396, 22)
         Me.DisplaySeachTextBox.TabIndex = 5
+        '
+        'FilterComboBox
+        '
+        Me.FilterComboBox.FormattingEnabled = True
+        Me.FilterComboBox.Location = New System.Drawing.Point(393, 319)
+        Me.FilterComboBox.Name = "FilterComboBox"
+        Me.FilterComboBox.Size = New System.Drawing.Size(121, 24)
+        Me.FilterComboBox.TabIndex = 6
+        '
+        'DisplayLabel
+        '
+        Me.DisplayLabel.AutoSize = True
+        Me.DisplayLabel.Location = New System.Drawing.Point(393, 350)
+        Me.DisplayLabel.Name = "DisplayLabel"
+        Me.DisplayLabel.Size = New System.Drawing.Size(51, 17)
+        Me.DisplayLabel.TabIndex = 7
+        Me.DisplayLabel.Text = "Label1"
         '
         'StansGroceryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DisplayLabel)
+        Me.Controls.Add(Me.FilterComboBox)
         Me.Controls.Add(Me.DisplaySeachTextBox)
         Me.Controls.Add(Me.SearchTextBox)
-        Me.Controls.Add(Me.IsleRadioButton)
+        Me.Controls.Add(Me.AisleRadioButton)
         Me.Controls.Add(Me.CategoryRadioButton)
         Me.Controls.Add(Me.SearchButton)
         Me.Controls.Add(Me.DisplayListBox)
@@ -105,7 +126,9 @@ Partial Class StansGroceryForm
     Friend WithEvents DisplayListBox As ListBox
     Friend WithEvents SearchButton As Button
     Friend WithEvents CategoryRadioButton As RadioButton
-    Friend WithEvents IsleRadioButton As RadioButton
+    Friend WithEvents AisleRadioButton As RadioButton
     Friend WithEvents SearchTextBox As TextBox
     Friend WithEvents DisplaySeachTextBox As TextBox
+    Friend WithEvents FilterComboBox As ComboBox
+    Friend WithEvents DisplayLabel As Label
 End Class
